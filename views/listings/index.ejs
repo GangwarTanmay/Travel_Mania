@@ -1,0 +1,336 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div
+    class="filters mt-2 mb-2 d-flex align-items-center flex-row"
+    style="overflow-x: scroll; scrollbar-width: none"
+  >
+    <a href="/listings?q=nature_parks">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-leaf"></i>
+        <span> Nature & Parks </span>
+      </div>
+    </a>
+    <a href="/listings?q=historical_sites">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-gopuram"></i>
+        <span> Historical sites </span>
+      </div>
+    </a>
+    <a href="/listings?q=museums_galleries">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-building-columns"></i>
+        <span> Museum and galleries </span>
+      </div>
+    </a>
+    <a href="/listings?q=restaurants_and_food">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-utensils"></i>
+        <span> Restaurants and Food </span>
+      </div>
+    </a>
+    <a href="/listings?q=shopping_and_markets">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span> Shopping and Markets </span>
+      </div>
+    </a>
+    <a href="/listings?q=religious_sites">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-om"></i>
+        <span> Religious Sites </span>
+      </div>
+    </a>
+    <a href="/listings?q=family_friendly">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-user-group"></i>
+        <span> Family Friendly </span>
+      </div>
+    </a>
+    <a href="/listings?q=sports_venues_and_stadiums">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-baseball-bat-ball"></i>
+        <span> Sports Venues and Stadiums </span>
+      </div>
+    </a>
+    <a href="/listings?q=educational_institutions">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-school"></i>
+        <span> Educational Institutions </span>
+      </div>
+    </a>
+    <a href="/listings?q=health_and_wellness">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-notes-medical"></i>
+        <span> Health and Wellness </span>
+      </div>
+    </a>
+  </div>
+  <hr style="margin: 0px" />
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active mt-3">
+        <img
+          src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-331625-933054.jpg&fm=jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Discover the world through the eyes of fellow travelers.</h5>
+        </div>
+      </div>
+      <div class="carousel-item mt-3">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1400/0*sXyKd-rXARTw16sT.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Travel smarter. Share better. Connect deeper.</h5>
+        </div>
+      </div>
+      <div class="carousel-item mt-3">
+        <img
+          src="https://c0.wallpaperflare.com/preview/3/668/877/india-varanasi-bengaluru-evening.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Journey beyond the beaten path. Find inspiration everywhere.</h5>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div style="margin: 5rem auto 2rem auto">
+    <h1
+      style="
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      Breathtaking Cities
+    </h1>
+    <a href="/listings" style="text-decoration: none; color: initial"
+      ><h4>
+        View All
+        <i class="fa-solid fa-angle-right" style="color: #ffd43b"></i></h4
+    ></a>
+    <div class="row custom-cards mt-3 d-flex flex-row justify-content-evenly">
+      <a href="/listings?city=lucknow">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/11/lucknow-shutterstock_375479791-1-1280x720.jpg"
+              alt=""
+            />
+          </div>
+          <h6>Lucknow</h6>
+        </div>
+      </a>
+      <a href="/listings?city=udaipur">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://www.holidify.com/images/bgImages/UDAIPUR.jpg"
+              alt=""
+            />
+          </div>
+          <h6>Udaipur</h6>
+        </div>
+      </a>
+      <a href="/listings?city=shimla">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://static.toiimg.com/photo/msid-102383896,width-96,height-65.cms"
+              alt=""
+            />
+          </div>
+          <h6>Shimla</h6>
+        </div>
+      </a>
+      <a href="/listings?city=ayodhya">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://www.fabhotels.com/blog/wp-content/uploads/2024/01/e7237302-600x400-1.jpg"
+              alt=""
+            />
+          </div>
+          <h6>Ayodhya</h6>
+        </div>
+      </a>
+      <a href="/listings?city=mathura">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://www.tirthyatraindia.com/assets/images/spiritual-tours/mathura.jpg"
+              alt=""
+            />
+          </div>
+          <h6>Mathura</h6>
+        </div>
+      </a>
+      <a href="/listings?city=varanasi ">
+        <div class="col-md-2 d-flex align-items-center flex-column custom-card">
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg/1200px-Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg"
+              alt=""
+            />
+          </div>
+          <h6>Varanasi</h6>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="newsletter-div d-flex align-items-center justify-content-center">
+    <div class="row">
+      <div
+        class="col-md-6 d-flex flex-column align-items-center justify-content-center"
+      >
+        <h4>Get Timely Travel Updates from us</h4>
+        <p>Subscribe to our newsletter to get our latest updates and more</p>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <form class="d-flex" action="/" method="post">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+          />
+          <button class="btn btn-outline-warning ms-2">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-evenly" style="margin: 2rem auto">
+    <div class="mt-2 mb-2">
+      <h1
+        style="
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+        "
+      >
+        Top Trending Destinations
+      </h1>
+      <a href="/listings" style="text-decoration: none; color: initial"
+        ><h4>
+          View All
+          <i class="fa-solid fa-angle-right" style="color: #ffd43b"></i></h4
+      ></a>
+    </div>
+    <% for(let listing of allListings){%>
+    <a
+      class="listing-link"
+      href="/listings/<%=listing._id%>"
+      style="width: fit-content"
+    >
+      <div
+        class="card col-lg-4 col-sm-12 col-md-6"
+        style="width: 18rem; margin: 0px auto"
+      >
+        <div class="card-img">
+          <img
+            src="<%=listing.image.url%>"
+            class="card-img-top show-img1"
+            alt="Listing-image"
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%=listing.title%><br /></b>
+            <%=listing.location%>, <%=listing.country%>
+          </p>
+        </div>
+      </div>
+    </a>
+    <%}%>
+  </div>
+  <div
+    class="about-us d-flex align-items-center justify-content-center"
+    id="about-us"
+  >
+    <div class="d-flex flex-column align-items-center">
+      <h1>About us</h1>
+      <p>
+        Welcome to Travel Mania, your ultimate destination for discovering and
+        sharing remarkable travel experiences from around the globe.
+      </p>
+      <p>
+        Our mission is simple: to empower travelers to uncover the world's most
+        extraordinary destinations and experiences while fostering a sense of
+        community and camaraderie along the way. With a diverse array of
+        categories ranging from scenic nature spots to historical landmarks,
+        bustling urban hubs to serene countryside retreats, there's something
+        for every traveler to discover and share on Tavel Mania.
+      </p>
+      <h5>Tanmay</h5>
+    </div>
+  </div>
+</body>

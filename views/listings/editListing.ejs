@@ -1,0 +1,108 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <h3 style="width: 80%; margin: 0px auto">Edit listing</h3>
+  <form
+    class="needs-validation"
+    method="post"
+    action="/listings/<%=listingData._id%>?_method=PATCH"
+    novalidate
+    enctype="multipart/form-data"
+    style="width: 80%; margin: 20px auto"
+  >
+    <div class="mb-3">
+      <label for="title" class="form-label">Edit title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        value="<%=listingData.title%>"
+        required
+      />
+      <div class="invalid-feedback">Title is required!</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="image-preview">
+          Current Image <br />
+          <img src="<%=listingData.image.url%>" alt="" />
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="mb-3">
+          <label for="ImageURL" class="form-label">Upload New Image</label>
+          <input type="file" class="form-control" id="ImageURL" name="image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">Category</label>
+      <select class="form-select" id="categories" name="category">
+        <option value="nature_parks">Nature & Parks</option>
+        <option value="historical_sites">Historical Sites & Landmarks</option>
+        <option value="museums_galleries">Museums & Galleries</option>
+        <option value="restaurants_and_food">Restaurants & Food</option>
+        <option value="shopping__and_markets">Shopping & Markets</option>
+        <option value="religious_sites">Religious Sites</option>
+        <option value="family_friendly">Family-Friendly</option>
+        <option value="sports_venues_and_stadiums">
+          Sports Venues & Stadiums
+        </option>
+        <option value="educational_institutions">
+          Educational Institutions
+        </option>
+        <option value="health_and_wellness">Health & Wellness</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="location" class="form-label">Edit Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="location"
+            name="location"
+            value="<%=listingData.location%>"
+            required
+          />
+          <div class="invalid-feedback">Enter location!</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="country" class="form-label">Change Country</label>
+          <input
+            type="text"
+            class="form-control"
+            id="country"
+            name="country"
+            value="<%=listingData.country%>"
+            required
+          />
+          <div class="invalid-feedback">Enter Country also!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Change Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="3"
+        name="description"
+        required
+      >
+<%=listingData.description%></textarea
+      >
+      <div class="invalid-feedback">Enter short description!</div>
+    </div>
+    <button class="btn btn-outline-primary">Save Changes</button>
+  </form>
+</body>

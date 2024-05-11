@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom stick-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <div class="logo-outer">
+        <div class="logo-inner-left">TRAVEL</div>
+        <div class="logo-inner-right">MANIA</div>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/#about-us">About Us</a>
+        <a class="nav-link" href="/listings/new">Add a place</a>
+      </div>
+      <div
+        class="d-flex flex-md-column flex-lg-row flex-sm-column justify-content-sm-start justify-content-md-start justify-content-lg-end"
+        style="width: 80%; height: 2.5rem"
+      >
+        <form action="/listings" method="get" class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search by 'city'"
+            aria-label="Search"
+            name="city"
+          />
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+        <div class="dropdown dropstart">
+          <button
+            class="d-flex dropdown"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div
+              class="d-flex profile-outer justify-content-center align-items-center shadow"
+            >
+              <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="profile">
+                <%if(!user){%>
+                <i class="fa-solid fa-user"></i>
+                <%}else{%>
+                <h6><%=user.username.charAt(0)%></h6>
+                <%}%>
+              </div>
+            </div>
+          </button>
+          <ul class="dropdown-menu">
+            <%if(!user){%>
+            <li><a class="dropdown-item" href="/user/signIn">Log in</a></li>
+            <%}else{%>
+            <li>
+              <a class="dropdown-item" href="#">Hey, <%=user.username%></a>
+            </li>
+            <%}%>
+            <li>
+              <a class="dropdown-item" href="#">Add a place</a>
+            </li>
+            <li>
+              <form action="/user/logout" method="get">
+                <button class="logout-btn dropdown-item">Log Out</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

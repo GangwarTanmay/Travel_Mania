@@ -1,0 +1,99 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <h3>Add new listing</h3>
+  <form
+    class="needs-validation"
+    method="post"
+    action="/listings"
+    novalidate
+    enctype="multipart/form-data"
+  >
+    <div class="mb-3">
+      <label for="title" class="form-label">Enter title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        required
+      />
+      <div class="valid-feedback">Title Looks Good :)</div>
+      <div class="invalid-feedback">Enter title first!</div>
+    </div>
+
+    <!-- <div class="mb-3">
+      <label for="ImageURL" class="form-label">Enter image url</label>
+      <input type="text" class="form-control" id="ImageURL" name="image" />
+    </div> -->
+
+    <div class="mb-3">
+      <label for="ImageURL" class="form-label">Image</label>
+      <input type="file" class="form-control" id="ImageURL" name="image" />
+    </div>
+
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">Category</label>
+      <select class="form-select" id="categories" name="category">
+        <option value="nature_parks">Nature & Parks</option>
+        <option value="historical_sites">Historical Sites & Landmarks</option>
+        <option value="museums_galleries">Museums & Galleries</option>
+        <option value="restaurants_and_food">Restaurants & Food</option>
+        <option value="shopping_and_markets">Shopping & Markets</option>
+        <option value="religious_sites">Religious Sites</option>
+        <option value="family_friendly">Family-Friendly</option>
+        <option value="sports_venues_and_stadiums">
+          Sports Venues & Stadiums
+        </option>
+        <option value="educational_institutions">
+          Educational Institutions
+        </option>
+        <option value="health_and_wellness">Health & Wellness</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="location"
+            name="location"
+            required
+          />
+          <div class="valid-feedback">Location Looks Excellent :)</div>
+          <div class="invalid-feedback">Enter Location!</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input
+            type="text"
+            class="form-control"
+            id="country"
+            name="country"
+            required
+          />
+          <div class="valid-feedback">Country seems Good :)</div>
+          <div class="invalid-feedback">Enter country!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="3"
+        name="description"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Enter short description also!</div>
+    </div>
+    <button class="btn btn-outline-primary">Add Listing</button>
+  </form>
+</body>

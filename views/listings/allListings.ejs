@@ -1,0 +1,127 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div
+    class="filters mt-2 mb-2 d-flex align-items-center flex-row"
+    style="overflow-x: scroll; scrollbar-width: none"
+  >
+    <a href="/listings?q=nature_parks">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-leaf"></i>
+        <span> Nature & Parks </span>
+      </div>
+    </a>
+    <a href="/listings?q=historical_sites">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-gopuram"></i>
+        <span> Historical sites </span>
+      </div>
+    </a>
+    <a href="/listings?q=museums_galleries">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-building-columns"></i>
+        <span> Museum and galleries </span>
+      </div>
+    </a>
+    <a href="/listings?q=restaurants_and_food">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-utensils"></i>
+        <span> Restaurants and Food </span>
+      </div>
+    </a>
+    <a href="/listings?q=shopping_and_markets">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span> Shopping and Markets </span>
+      </div>
+    </a>
+    <a href="/listings?q=religious_sites">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-om"></i>
+        <span> Religious Sites </span>
+      </div>
+    </a>
+    <a href="/listings?q=family_friendly">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-user-group"></i>
+        <span> Family Friendly </span>
+      </div>
+    </a>
+    <a href="/listings?q=sports_venues_and_stadiums">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-baseball-bat-ball"></i>
+        <span> Sports Venues and Stadiums </span>
+      </div>
+    </a>
+    <a href="/listings?q=educational_institutions">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-school"></i>
+        <span> Educational Institutions </span>
+      </div>
+    </a>
+    <a href="/listings?q=health_and_wellness">
+      <div
+        class="filter d-flex justify-content-center align-items-center flex-column"
+      >
+        <i class="fa-solid fa-notes-medical"></i>
+        <span> Health and Wellness </span>
+      </div>
+    </a>
+  </div>
+  <hr style="margin: 0px" />
+  <div class="row d-flex justify-content-evenly" style="margin: 2rem auto">
+    <div class="mt-2 mb-2">
+      <h1
+        style="
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+        "
+      >
+        All Destinations
+      </h1>
+    </div>
+    <% for(let listing of allListings){%>
+    <a
+      class="listing-link"
+      href="/listings/<%=listing._id%>"
+      style="width: fit-content"
+    >
+      <div
+        class="card col-lg-4 col-sm-12 col-md-6"
+        style="width: 18rem; margin: 0px auto"
+      >
+        <div class="card-img">
+          <img
+            src="<%=listing.image.url%>"
+            class="card-img-top show-img1"
+            alt="Listing-image"
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%=listing.title%><br /></b>
+            <%=listing.location%>, <%=listing.country%>
+          </p>
+        </div>
+      </div>
+    </a>
+    <%}%>
+  </div>
+</body>

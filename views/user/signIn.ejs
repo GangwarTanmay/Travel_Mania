@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div class="col mt-3">
+    <div class="col-lg-6 col-sm-12 col-md-12" style="margin: 0px auto;">
+      <h3>Log into your Account</h3>
+      <form
+        class="needs-validation log-in-form"
+        method="post"
+        action="/user/signIn"
+        novalidate
+      >
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            required
+          />
+          <div class="invalid-feedback">Enter username!</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+          />
+          <div class="invalid-feedback">Enter password!</div>
+        </div>
+
+        <div class="mb-3" id="password-visibility-div">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Show Password
+          </label>
+        </div>
+
+        <div class="log">
+          Don't have an account ?
+          <a href="http://localhost:8080/user/signUp" class="login">Sign Up</a>
+        </div>
+        <button class="btn btn-outline-primary">Sign In</button>
+      </form>
+    </div>
+  </div>
+</body>
