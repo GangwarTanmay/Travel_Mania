@@ -58,7 +58,11 @@
 
         <div class="log">
           Already have an account?
-          <a href="http://localhost:8080/user/signIn" class="login">Log in</a>
+          <form action="user/signIn" method="get">
+            <button class="login" style="border: none; background: transparent;color: blue;">
+              Sign In
+            </button>
+          </form>
         </div>
         <button class="btn btn-outline-primary">Sign Up</button>
       </form>

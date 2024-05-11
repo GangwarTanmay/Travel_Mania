@@ -61,7 +61,9 @@
           </button>
           <ul class="dropdown-menu">
             <%if(!user){%>
-            <li><a class="dropdown-item" href="/user/signIn">Log in</a></li>
+            <li><form action="/user/signIn" method="get">
+              <button class="dropdown-item">Log in</button>
+            </form></li>
             <%}else{%>
             <li>
               <a class="dropdown-item" href="#">Hey, <%=user.username%></a>
