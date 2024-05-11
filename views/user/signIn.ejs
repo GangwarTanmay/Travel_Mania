@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate")%>
 <body>
   <div class="col mt-3">
-    <div class="col-lg-6 col-sm-12 col-md-12" style="margin: 0px auto">
+    <div class="col-lg-6 col-sm-12 col-md-12" style="margin: 0px auto;">
       <h3>Log into your Account</h3>
       <form
         class="needs-validation log-in-form"
@@ -46,11 +46,7 @@
 
         <div class="log">
           Don't have an account ?
-          <form action="user/signUp" method="get">
-            <button class="login" style="border: none; background: transparent;color: blue;">
-              Sign Up
-            </button>
-          </form>
+          <a href="user/signUp" class="login">Sign Up</a>
         </div>
         <button class="btn btn-outline-primary">Sign In</button>
       </form>
