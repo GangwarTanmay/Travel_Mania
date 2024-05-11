@@ -12,7 +12,11 @@ module.exports.index = async (req, res, next) => {
             res.render("./listings/allListings.ejs", { allListings });
         }
         else if (req.query.city) {
-            const allListings = await listing.find({ location: req.query.city });
+            let city = req.query.city;
+            city = city.toLowerCase();
+            city = city.replace(city.charAt(0), city.charAt(0).toUpperCase());
+            console.log(city);
+            const allListings = await listing.find({ location: city });
             if (allListings.length == 0) {
                 next(new ExpressError(404, 'No place found at this location'));
                 return;
